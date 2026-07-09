@@ -1,0 +1,6 @@
+{
+  "connector_id": "caffeine-mtp-bridge",
+  "artifact_url": "https://example.invalid/artifacts/nova-build.zip",
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "validation_status": "example-unverified"
+}
