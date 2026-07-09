@@ -1,0 +1,6 @@
+{
+  "task": "Use Caffeine to build and preview a NOVA app package, then return an artifact hash for import.",
+  "target_surface": "caffeine mtp",
+  "risk_level": "medium",
+  "permission_boundary": "dry-run until operator approves artifact import"
+}
