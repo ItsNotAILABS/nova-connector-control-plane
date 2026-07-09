@@ -5,24 +5,32 @@
 ![Python](https://img.shields.io/badge/python-stdlib%20server-3776ab)
 ![MCP](https://img.shields.io/badge/MCP-contract-0b7285)
 ![Proof](https://img.shields.io/badge/proof-receipt%20first-2f9e44)
+![CI](https://img.shields.io/badge/CI-smoke%20%2B%20benchmarks-success)
+
+![NOVA Connector Control Plane](assets/connector-control-plane.svg)
 
 Dedicated production home for connector routing, connectorctl, live MCP discovery, and artifact import dashboards.
 
 This repo turns external AI systems into governed worker surfaces. Caffeine, Grok Build, Claude Code, Cursor, Antigravity, browser workbenches, generic MCP servers, and ChatGPT app/OAuth flows can be discovered, routed, and imported through proof gates.
 
-## Quick Start
+## Human Flow
 
-Validate the connector registry:
+1. Validate connectors.
+2. Pick a worker surface.
+3. Generate a route plan.
+4. Review permission boundary and proof gates.
+5. Import artifacts only with hash and validation status.
+
+See `docs/HUMAN_AI_WORKFLOWS.md` for human and AI worker flows.
+
+## Quick Start
 
 ```bash
 python tools/connectorctl.py validate
-```
-
-List and inspect connectors:
-
-```bash
 python tools/connectorctl.py list
 python tools/connectorctl.py describe caffeine-mtp-bridge
+python tests/smoke_test.py
+python benchmarks/benchmark_routes.py
 ```
 
 Run the local API:
@@ -50,7 +58,10 @@ curl -s -X POST http://127.0.0.1:8770/artifacts/import -H 'content-type: applica
 | API server | `server/connector_control_plane.py` |
 | CLI | `tools/connectorctl.py` |
 | MCP manifest | `mcp/connector-control-plane.mcp.json` |
-| Examples | `examples/` |
+| Smoke tests | `tests/smoke_test.py` |
+| Benchmarks | `benchmarks/benchmark_routes.py` |
+| CI | `.github/workflows/ci.yml` |
+| Workflows | `docs/HUMAN_AI_WORKFLOWS.md` |
 
 ## Operating Law
 
@@ -69,4 +80,4 @@ NOVA connector control plane, MCP connector registry, external AI connector plat
 - Persist route and artifact receipts.
 - Add live MCP discovery transport.
 - Add dashboard UI for connector readiness.
-- Add CI validation.
+- Add CI status badges after first workflow run.
