@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">NOVA Connector Control Plane</title>
+  <desc id="desc">Architecture image for connector routing, proof gates, and artifact imports.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7fbff"/><stop offset="1" stop-color="#eef7f4"/></linearGradient><style>.title{font:700 42px Arial,sans-serif;fill:#12212f}.sub{font:500 18px Arial,sans-serif;fill:#526879}.card{fill:#fff;stroke:#d6e2e8;stroke-width:1.5;rx:18}.core{fill:#102838;rx:24}.coreText{font:800 26px Arial,sans-serif;fill:#fff}.coreSub{font:500 14px Arial,sans-serif;fill:#cfe2eb}.label{font:700 18px Arial,sans-serif;fill:#12212f}.body{font:500 14px Arial,sans-serif;fill:#526879}.line{stroke:#2f7891;stroke-width:2.5;fill:none;stroke-linecap:round}.pill{fill:#eaf8f5;stroke:#b7dad4;rx:14}</style></defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="70" y="78" class="title">NOVA Connector Control Plane</text>
+  <text x="72" y="112" class="sub">Route external AI workers through permission boundaries, proof gates, and artifact import receipts.</text>
+  <rect x="420" y="250" width="360" height="180" class="core"/>
+  <text x="600" y="314" text-anchor="middle" class="coreText">Connector Router</text>
+  <text x="600" y="346" text-anchor="middle" class="coreSub">registry • route plan • artifact receipt</text>
+  <rect x="500" y="372" width="200" height="32" class="pill"/>
+  <text x="600" y="393" text-anchor="middle" font="700 13px Arial" fill="#526879">PROOF BEFORE IMPORT</text>
+  <rect x="70" y="170" width="310" height="112" class="card"/><text x="105" y="216" class="label">Human Operator</text><text x="105" y="246" class="body">CLI, browser, IDE, terminal workflows</text>
+  <rect x="70" y="450" width="310" height="112" class="card"/><text x="105" y="496" class="label">External AI Workers</text><text x="105" y="526" class="body">Caffeine, Grok, Claude, Cursor, MCP</text>
+  <rect x="820" y="170" width="310" height="112" class="card"/><text x="855" y="216" class="label">AI Agent Caller</text><text x="855" y="246" class="body">MCP-style tools and route plans</text>
+  <rect x="820" y="450" width="310" height="112" class="card"/><text x="855" y="496" class="label">NOVA Import Gate</text><text x="855" y="526" class="body">hashes, validation, receipts, approval</text>
+  <path d="M380 226 C430 240 430 304 420 328" class="line"/><path d="M380 506 C430 482 430 398 420 362" class="line"/><path d="M820 226 C770 240 770 304 780 328" class="line"/><path d="M820 506 C770 482 770 398 780 362" class="line"/>
+  <rect x="74" y="642" width="1052" height="34" rx="17" fill="#102838"/><text x="600" y="664" text-anchor="middle" font="700 14px Arial" fill="#fff">External tools help. NOVA decides what enters the product.</text>
+</svg>
