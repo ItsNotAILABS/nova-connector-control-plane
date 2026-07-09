@@ -1,0 +1,21 @@
+name: Connector Control Plane CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate connector registry
+        run: python tools/connectorctl.py validate
+      - name: Run smoke tests
+        run: python tests/smoke_test.py
+      - name: Run route benchmark
+        run: python benchmarks/benchmark_routes.py
