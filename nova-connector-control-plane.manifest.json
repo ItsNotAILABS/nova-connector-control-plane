@@ -1,0 +1,37 @@
+{
+  "schema": "nova.connector_control_plane.manifest.v1",
+  "name": "NOVA Connector Control Plane",
+  "authority": "ItsNotAILABS / NOVA",
+  "role": "Dedicated production home for external AI connector routing, connectorctl, live MCP discovery, and artifact import dashboards.",
+  "surfaces": [
+    "connector registry",
+    "routing API",
+    "artifact import receipts",
+    "connectorctl CLI",
+    "MCP-style manifest",
+    "operator docs"
+  ],
+  "connectors": [
+    "caffeine-mtp-bridge",
+    "grok-build-bridge",
+    "claude-code-bridge",
+    "cursor-ide-bridge",
+    "antigravity-terminal-bridge",
+    "browser-workbench-bridge",
+    "generic-mcp-gateway",
+    "chatgpt-app-oauth-bridge"
+  ],
+  "proof_gates": [
+    "connector id exists",
+    "permission boundary recorded",
+    "artifact evidence captured",
+    "NOVA import approval required",
+    "unsafe execution remains blocked by default"
+  ],
+  "next_gates": [
+    "persist receipts",
+    "add live MCP discovery transport",
+    "add dashboard UI",
+    "add CI validation"
+  ]
+}

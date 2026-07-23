@@ -1,0 +1,77 @@
+{
+  "schema": "nova.connector_registry.v1",
+  "connectors": [
+    {
+      "id": "caffeine-mtp-bridge",
+      "name": "Caffeine CLI and MTP Bridge",
+      "surface": "mtp",
+      "authority": "Build, preview, check, and package bounded app work while NOVA retains proof and import authority.",
+      "inputs": ["bounded build request", "repository path", "allowed tools", "operator approval boundary"],
+      "outputs": ["tool discovery report", "build artifact", "preview status", "validation log", "artifact hash"],
+      "proof_gates": ["auth status captured", "tool list captured", "artifact hash captured", "no fake deploy claim"]
+    },
+    {
+      "id": "grok-build-bridge",
+      "name": "Grok Build Bridge",
+      "surface": "api",
+      "authority": "Request external planning, implementation suggestions, review, and patch analysis without granting trunk authority.",
+      "inputs": ["task brief", "repository context", "approval boundary", "artifact return contract"],
+      "outputs": ["plan", "diff summary", "review notes", "verification notes", "handoff artifact"],
+      "proof_gates": ["plan captured", "approval boundary recorded", "diff captured", "tests captured"]
+    },
+    {
+      "id": "claude-code-bridge",
+      "name": "Claude Code Bridge",
+      "surface": "cli",
+      "authority": "Route bounded repo analysis, code review, and patch suggestions through Claude Code while NOVA keeps import authority.",
+      "inputs": ["repo scope", "task brief", "allowed files", "review mode"],
+      "outputs": ["analysis", "patch suggestion", "risk notes", "verification plan"],
+      "proof_gates": ["scope recorded", "diff captured", "review notes captured", "NOVA import approval"]
+    },
+    {
+      "id": "cursor-ide-bridge",
+      "name": "Cursor IDE Bridge",
+      "surface": "ide",
+      "authority": "Coordinate IDE-assisted edits, navigation, and developer workflow tasks under repo review gates.",
+      "inputs": ["workspace path", "selected files", "task brief", "operator approval"],
+      "outputs": ["edited files", "workspace notes", "test command", "handoff summary"],
+      "proof_gates": ["file list captured", "operator approval", "tests recorded", "review-ready branch"]
+    },
+    {
+      "id": "antigravity-terminal-bridge",
+      "name": "Antigravity Terminal Bridge",
+      "surface": "local-runtime",
+      "authority": "Use terminal workflows for local app execution, debugging, and deployment preparation under proof gates.",
+      "inputs": ["terminal command", "workspace state", "dev server target", "deployment intent"],
+      "outputs": ["command log", "runtime status", "error report", "deployment checklist"],
+      "proof_gates": ["command captured", "exit code captured", "runtime URL captured", "unsafe command review"]
+    },
+    {
+      "id": "browser-workbench-bridge",
+      "name": "Browser Workbench and Service Worker Bridge",
+      "surface": "browser",
+      "authority": "Map browser runtime capabilities, storage, service workers, manifests, WASM modules, and telemetry into workbench plans.",
+      "inputs": ["console trace", "network trace", "manifest", "storage report", "service worker state"],
+      "outputs": ["capability map", "runtime risk report", "workbench plan", "browser app checklist"],
+      "proof_gates": ["origin captured", "storage boundary captured", "service worker status", "no cross-origin bypass claim"]
+    },
+    {
+      "id": "generic-mcp-gateway",
+      "name": "Generic MCP Gateway",
+      "surface": "mcp",
+      "authority": "Discover and normalize arbitrary MCP servers into NOVA connector contracts.",
+      "inputs": ["server URL", "transport", "auth mode", "discovery response"],
+      "outputs": ["normalized connector", "tool list", "resource list", "prompt list", "risk notes"],
+      "proof_gates": ["server identity", "auth boundary", "tool list hash", "permission review"]
+    },
+    {
+      "id": "chatgpt-app-oauth-bridge",
+      "name": "ChatGPT App OAuth Bridge",
+      "surface": "browser",
+      "authority": "Design bounded app/tool flows where users authorize NOVA product access without credential capture.",
+      "inputs": ["app surface", "oauth provider", "permission scope", "user flow"],
+      "outputs": ["auth strategy", "permission map", "user flow", "compliance notes"],
+      "proof_gates": ["official auth path", "permission scope", "terms review", "no credential capture"]
+    }
+  ]
+}
